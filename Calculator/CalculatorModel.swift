@@ -11,7 +11,7 @@ import Foundation
 class CalcuatorModel {
     
     
-    private enum Op: Printable // Protocol 
+    private enum Op: CustomStringConvertible // Protocol 
     {
         case Operand(Double) //associating data with case
         case UnaryOperation(String, Double -> Double)
@@ -88,7 +88,7 @@ class CalcuatorModel {
   
     func evaluate() -> Double? {
         let (result,remainder) = evaluate(opStack)
-        println("\(opStack) = \(result) with \(remainder) left over ")
+        print("\(opStack) = \(result) with \(remainder) left over ")
         return result
     }
     

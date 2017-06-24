@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func operate(sender: UIButton) {
-        let operation = sender.currentTitle!
+        _ = sender.currentTitle!
         if (userIsInTheMiddleOfTyping){
             enter()
         }
